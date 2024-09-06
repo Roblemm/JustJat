@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title> Sign Up | Just Jat</title>
+    <!--Default Styles-->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!--Default Styles-->
+    <link rel="stylesheet" href="assets/css/signup.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+<body id="sign-up-body">
+    <div ng-app="">
+        <div id="sign-up-container">
+            <h1 id="sign-up-title">Sign Up</h1>
+            <div id="sign-up-form-container">
+                <form id="sign-up-form">
+                    <input type="text" name="username" placeholder="Username" required ng-style="{'color': myCol}" ng-model="myCol">
+                    <input id="password" type="password" name="password" placeholder="Password" required ng-style="{'color': myCol2}" ng-model="myCol2"> 
+                    <input id="confirm-password" style="margin-bottom: 0 !important;" ng-style="{'color': myCol3}" type="password" name="confirm-password" placeholder="Confirm Password" required ng-model="myCol3">
+                    <div id="no-match-text"></div>
+                    <button id="submit" type="button">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            let cp = $("#confirm-password");
+            let p = $("#password");
+            let noMatchText = $("#no-match-text");
+            function checkNoMatch(ev, checkEmpty=false){
+                let isEmpty = (cp.val().length==0 || p.val().length==0);
+                if((checkEmpty&&isEmpty) || ((!isEmpty) && cp.val()!==p.val())){
+                    cp.addClass("no-match");
+                    noMatchText.text("Passwords do not match!");
+                    $("#sign-up-container").effect("shake",{times: 1},200);
+                } else {
+                    cp.removeClass("no-match");
+                    noMatchText.text("");
+                }
+                return cp.val()!==p.val();
+            }
+            cp.blur(checkNoMatch);
+            p.blur(checkNoMatch);
+            $("#submit").click((ev)=>{checkNoMatch(ev,true);});
+        })
+    </script>
+    <script src="assets/js/signup.js"></script>
+</body>

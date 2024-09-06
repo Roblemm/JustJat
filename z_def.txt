@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!--Default Styles-->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!--Default Styles-->
+
+    <!--Page Title--><title> Home | Just Jat</title>
+    <!--PAGE CSS--><link rel="stylesheet" href="assets/css/home.css">
+
+    <!--ANGULAR--><link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <!--FONT AWESOME--><script src="https://kit.fontawesome.com/73e3db79f3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--JQUERY--><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--JQUERYUI--><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!--ANGULAR--><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!--PAGE JAVASCRIPT--><script src="assets/js/home.js"></script>
+</body>
