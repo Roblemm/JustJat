@@ -1,0 +1,77 @@
+/*
+MAIN: #34ABEB
+DARKS: #38596B, #184E6B, #2885B8
+LIGHTS: #7CC6EE
+*/
+/*----HOME----*/
+#home-title-container{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 80px;
+    animation: backgroundChange 10s ease-in infinite;
+}
+@keyframes backgroundChange{
+    0%{background-color: cornflowerblue;}
+    25%{background-color: rgb(100, 182, 237);} 
+    50%{background-color: rgb(100, 114, 237);} 
+    75%{background-color: rgb(100, 182, 237);} 
+    100%{background-color: cornflowerblue;} 
+}
+.small-info-container,.large-info-container{
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(24, 78, 107, 0.5);
+    color: white;
+    font-variant: small-caps;
+    font-size: 20px;
+    margin-top: 10px;
+}.large-info-container{min-height: 600px !important;}
+.small-info-container-header, .large-info-container-header{
+    background-color: rgba(24, 78, 107, 0.5);
+}
+.small-info-container-pictures, .large-info-container-pictures{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-grow: 1;
+} 
+.small-info-container-pictures a, .large-info-container-pictures a{
+    display: flex;
+    flex: 1 0 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: none;
+} .large-info-container-pictures a{display: none;}
+.small-info-container-pictures a img, .large-info-container-pictures a img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 90%;
+    min-height: 70%;
+    margin: 10px;
+    align-self: center;
+}
+.img-roll{
+    background-color: rgba(24, 78, 107, 0.5);
+}
+.visible{
+    display: flex !important;
+}
+.fade{
+    animation: fade 10s linear;
+}
+@keyframes fade{
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

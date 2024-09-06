@@ -1,0 +1,94 @@
+/*
+MAIN: #34ABEB
+DARKS: #38596B, #184E6B, #2885B8
+LIGHTS: #7CC6EE
+*/
+/*----SIGN UP----*/
+#sign-up-body{
+    animation: backgroundChange 10s ease-in infinite;
+}
+#sign-up-title{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#sign-up-container{
+    width: 350px; height: 400px;
+    margin: 45px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+    border-radius: 6%;
+    box-shadow: 5px 5px 9px;
+    animation: 2s ease-in-out 0s 1 zoomOut;
+}
+@keyframes zoomOut{
+    0%{
+        transform: scale(0);
+    }
+    80%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+#sign-up-form-container{
+    display: flex;
+    justify-content: center;
+}
+#sign-up-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#sign-up-form input{
+    margin-bottom: 15px;
+    width: 250px;
+    height: 22px;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 50px;
+    padding-left: 2px;
+    text-align: center;
+    outline: none;
+    transition: all 0.1s ease-in;
+}
+#sign-up-form input:hover{
+    border: 1px groove #7CC6EE;
+    width: 300px;
+    animation: 5s borderChange ease-in-out infinite;
+}
+@keyframes borderChange{
+    0%{border-color: cornflowerblue;}
+    25%{border-color: rgb(100, 182, 237);} 
+    50%{border-color: rgb(100, 114, 237);} 
+    75%{border-color: rgb(100, 182, 237);} 
+    100%{border-color: cornflowerblue;} 
+}
+#no-match-text{
+    height: 20px;
+    margin: 5px 0;
+    font-size: small;
+    color: red;
+    
+}
+.no-match{
+    border: 1px solid #ff6969 !important;
+}
+#sign-up-form button{
+    width: 120px;
+    background-color:rgb(113, 188, 223);
+    border-color:rgb(113, 188, 223);
+    border-radius: 50px;
+    border-style: outset;
+    border-width: 3px;
+    transition: all 0.3s ease-out;
+}
+#sign-up-form button:hover{
+    background-color:rgb(113, 164, 223);
+    border-color:rgb(113, 164, 223);
+    cursor: pointer;
+    width: 220px;
+}

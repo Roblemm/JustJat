@@ -1,0 +1,120 @@
+h1{
+    background: rgb(22, 41, 99);
+    color: white;
+    margin: 0;
+    padding: 1vh 2vw;
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 34px;
+}
+
+input{
+    font-size: 20px;
+    background-color: transparent;
+    width: 100%;
+    padding: 1vh 2vw 1vh 2vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: rgb(22, 41, 99);
+    border: 3px solid rgba(0,0,0,0)
+}
+input:focus{
+    background: white;
+    border: 3px solid rgb(22, 41, 99);
+    outline: none;
+}
+input::-webkit-input-placeholder { 
+    color: rgb(62, 72, 102);
+    opacity: 1; /* Firefox */
+}
+input::-moz-placeholder { 
+    color: rgb(62, 72, 102);
+    opacity: 1; /* Firefox */
+}
+input:-ms-input-placeholder { 
+    color: rgb(62, 72, 102);
+    opacity: 1; /* Firefox */
+}
+input::-ms-input-placeholder {
+    color: rgb(62, 72, 102);
+    opacity: 1; /* Firefox */
+}
+input::placeholder { 
+    color: rgb(62, 72, 102);
+    opacity: 1; /* Firefox */
+}
+
+
+li{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 2rem;
+    line-height: 2rem;
+    word-break: break-word;
+    color: rgb(27, 27, 27);
+}
+li .trash{
+    background: rgb(204, 0, 0);
+    min-height: 2rem;
+    height: 100%;
+    text-align: center;
+    color: white;
+    width: 0;
+    opacity: 0;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+    cursor: pointer;
+    margin-right: 2vw;
+    float: left;
+}
+.fas fa-trash-alt{
+    padding: auto 0;
+}
+li .text{
+    display: inline-block;
+    max-width: 53vw;
+}
+li:nth-child(2n-1){
+    background: rgba(87, 101, 144,0.5);
+}
+li:hover .trash{
+    width: 4vw;
+    color: white;
+    opacity: 1;
+}
+
+.fa-plus{
+    float: right;
+    cursor: pointer;
+}
+
+.completed{
+    color: rgb(65, 65, 65);
+    text-decoration: line-through;
+}
+
+#todos-container{
+    background: rgba(87, 101, 144,0.5);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+            box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    width: 60vw;
+    margin: 5vh auto;
+}
+#todos-container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+#todos-container ul::-webkit-scrollbar {
+    width: 3px;
+    background: rgba(87, 101, 144,0.5); /* make scrollbar transparent */
+}
+#todos-container ul::-webkit-scrollbar-thumb{
+    background-color: white;
+    width:5px;
+}
